@@ -1,0 +1,34 @@
+.navbar-collapse {
+  background-color: rgb(49, 49, 49);
+  height: 50px;
+  font-size: larger;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.nav-item {
+  padding: 10px 15px;
+  list-style: none;
+}
+
+.nav-link,
+.nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  color: grey;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.active > a {
+  color: white !important;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
