@@ -38,21 +38,21 @@ function closeModal(modal) {
 // SlideShow
 
 var slideIndex = 1;
-showSlides(slideIndex);
+showSlides1(slideIndex, 1);
+showSlides2(slideIndex, 2);
+showSlides3(slideIndex, 3);
+showSlides4(slideIndex, 4);
 
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+function plusSlides(n, i) {
+  if (i == 1) showSlides1((slideIndex += n), i);
+  if (i === 2) showSlides2((slideIndex += n), i);
+  if (i === 3) showSlides3((slideIndex += n), i);
+  if (i === 4) showSlides4((slideIndex += n), i);
 }
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
+function showSlides1(n, i) {
   var i;
-  var slides = document.getElementsByClassName('mySlides');
-  var dots = document.getElementsByClassName('demo');
-  var captionText = document.getElementById('caption');
+  var slides = document.getElementsByClassName('mySlides' + i);
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -62,10 +62,50 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none';
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(' active', '');
+  slides[slideIndex - 1].style.display = 'block';
+}
+
+function showSlides2(n, i) {
+  var i;
+  var slides = document.getElementsByClassName('mySlides' + i);
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
   }
   slides[slideIndex - 1].style.display = 'block';
-  dots[slideIndex - 1].className += ' active';
-  captionText.innerHTML = dots[slideIndex - 1].alt;
+}
+
+function showSlides3(n, i) {
+  var i;
+  var slides = document.getElementsByClassName('mySlides' + i);
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  slides[slideIndex - 1].style.display = 'block';
+}
+
+function showSlides4(n, i) {
+  var i;
+  var slides = document.getElementsByClassName('mySlides' + i);
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  slides[slideIndex - 1].style.display = 'block';
 }
