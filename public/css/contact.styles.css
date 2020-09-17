@@ -52,7 +52,7 @@ textarea {
 
 .contact__footer {
   clear: right;
-  padding: 50px;
+  padding: 10px;
   margin-top: 125px;
   background-color: #1e242c;
 }
@@ -109,4 +109,42 @@ textarea {
 
 #github:hover {
   color: #eee;
+}
+
+@media only screen and (max-width: 1130px) {
+  #form {
+    width: 50vw;
+  }
+  .footer-icons {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 875px) {
+  #contact {
+    position: relative;
+    top: -10vh;
+    clip-path: polygon(0 0, 50% 10vh, 100% 0, 100% 100%, 0 100%);
+  }
+  .footer-icons {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #form {
+    width: 70vw;
+  }
+  .footer-icons {
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #form {
+    width: 80vw;
+  }
+  .footer-icons {
+    width: 65%;
+  }
 }

@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: auto auto auto;
   color: black;
-  padding: 100px;
+  padding: 100px 5vw;
 }
 
 .projects_container__project {
@@ -175,25 +175,30 @@
   border-bottom: 1px solid #eee;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1130px) {
   .projects_container {
     display: grid;
     grid-template-columns: auto auto;
-    color: black;
-    margin-top: 100px;
-    margin-left: 50px;
-    margin-right: 50px;
+    padding: 75px 10vw;
   }
 }
 
-@media only screen and (max-width: 775px) {
+@media only screen and (max-width: 875px) {
   .projects_container {
     display: grid;
     grid-template-columns: auto;
-    color: black;
-    margin-top: 100px;
-    margin-left: 50px;
-    margin-right: 50px;
-    min-width: 500px;
+    padding: 75px 25vw;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  .projects_container {
+    padding: 75px 15vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .projects_container {
+    padding: 75px 10vw;
   }
 }

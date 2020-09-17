@@ -91,3 +91,53 @@
     transform: translateX(0);
   }
 }
+
+@media only screen and (max-width: 750px) {
+  .heading-primary-main {
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+  .heading-primary-sub {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  .btn:link,
+  .btn:visited {
+    padding: 7px 15px;
+  }
+}
+
+@media only screen and (max-width: 595px) {
+  .heading-primary-main {
+    font-size: 30px;
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
+  .heading-primary-sub {
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 0.5px;
+  }
+  .btn:link,
+  .btn:visited {
+    padding: 4px 10px;
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .text-box {
+    width: 100%;
+  }
+  .heading-primary-main {
+    font-size: 20px;
+  }
+  .heading-primary-sub {
+    font-size: 15px;
+  }
+  .btn:link,
+  .btn:visited {
+    padding: 2px 5px;
+  }
+}
