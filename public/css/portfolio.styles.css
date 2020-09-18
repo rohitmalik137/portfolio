@@ -8,6 +8,7 @@
   grid-template-columns: auto auto auto;
   color: black;
   padding: 100px 5vw;
+  min-width: 450px;
 }
 
 .projects_container__project {
@@ -200,5 +201,8 @@
 @media only screen and (max-width: 500px) {
   .projects_container {
     padding: 75px 10vw;
+  }
+  .projects_container__project {
+    height: 30rem;
   }
 }

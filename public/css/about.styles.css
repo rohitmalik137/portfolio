@@ -46,7 +46,7 @@ hr.about__heading__underline {
   background-size: cover;
   background-position: center center;
   position: relative;
-  margin: 15px;
+  margin: 15px auto;
   z-index: 1;
 }
 
@@ -116,5 +116,38 @@ hr.about__heading__underline {
   }
   .skills {
     width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .about__content-left-avatar {
+    width: 300px;
+    height: 300px;
+    margin: 15px auto;
+    z-index: 1;
+  }
+
+  .about__content-left-avatar:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 0;
+    height: 3px;
+    border-right: 75px solid transparent;
+    border-bottom: 150px solid rgb(226, 226, 226);
+    border-top: 150px solid rgb(226, 226, 226);
+  }
+
+  .about__content-left-avatar:after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 0;
+    height: 3px;
+    border-left: 75px solid transparent;
+    border-bottom: 150px solid rgb(226, 226, 226);
+    border-top: 150px solid rgb(226, 226, 226);
   }
 }

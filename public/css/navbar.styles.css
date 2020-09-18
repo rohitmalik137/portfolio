@@ -2,6 +2,7 @@
   background-color: rgb(49, 49, 49);
   height: 50px;
   font-size: larger;
+  overflow: hidden;
   display: flex;
   align-items: center;
   z-index: 10;
@@ -31,4 +32,24 @@
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+@media only screen and (max-width: 380px) {
+  .navbar-collapse {
+    height: 40px;
+    font-size: large;
+  }
+  .nav-item {
+    padding: 7px 10px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .navbar-collapse {
+    height: 40px;
+    font-size: medium;
+  }
+  .nav-item {
+    padding: 5px 7px;
+  }
 }
