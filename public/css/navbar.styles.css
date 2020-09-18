@@ -3,6 +3,7 @@
   height: 50px;
   font-size: larger;
   overflow: hidden;
+  width: 100vw;
   display: flex;
   align-items: center;
   z-index: 10;

@@ -1,9 +1,11 @@
 #about {
   background-color: rgb(226, 226, 226);
+  overflow-x: hidden;
 }
 
 .about__heading {
   text-align: center;
+  font-size: xx-large;
   color: black;
   padding-top: 100px;
   text-transform: uppercase;
@@ -20,8 +22,9 @@ hr.about__heading__underline {
 
 .about__content {
   display: flex;
-  justify-content: space-between;
-  padding: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: space-around;
 }
 
 .about__content-left {
@@ -40,8 +43,8 @@ hr.about__heading__underline {
 }
 
 .about__content-left-avatar {
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   background: transparent url('../assets/CYMERA_20190718_184652.jpg');
   background-size: cover;
   background-position: center center;
@@ -57,9 +60,9 @@ hr.about__heading__underline {
   left: -1px;
   width: 0;
   height: 3px;
-  border-right: 85px solid transparent;
-  border-bottom: 180px solid rgb(226, 226, 226);
-  border-top: 180px solid rgb(226, 226, 226);
+  border-right: 75px solid transparent;
+  border-bottom: 150px solid rgb(226, 226, 226);
+  border-top: 150px solid rgb(226, 226, 226);
 }
 
 .about__content-left-avatar:after {
@@ -69,14 +72,14 @@ hr.about__heading__underline {
   right: -1px;
   width: 0;
   height: 3px;
-  border-left: 85px solid transparent;
-  border-bottom: 180px solid rgb(226, 226, 226);
-  border-top: 180px solid rgb(226, 226, 226);
+  border-left: 75px solid transparent;
+  border-bottom: 150px solid rgb(226, 226, 226);
+  border-top: 150px solid rgb(226, 226, 226);
 }
 
 .skills {
   width: 40vw;
-  margin: 15px;
+  margin: 15px 0;
   padding-right: 10px;
   display: flex;
   color: rgb(104, 104, 104);
@@ -119,11 +122,23 @@ hr.about__heading__underline {
   }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 520px) {
+  .about__content-left p {
+    font-size: small;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    padding: 10px 55px 10px 20px;
+  }
+  .about__heading {
+    font-size: x-large;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
   .about__content-left-avatar {
-    width: 300px;
-    height: 300px;
-    margin: 15px auto;
+    width: 250px;
+    height: 250px;
+    margin: 25px auto;
     z-index: 1;
   }
 
@@ -134,9 +149,9 @@ hr.about__heading__underline {
     left: -1px;
     width: 0;
     height: 3px;
-    border-right: 75px solid transparent;
-    border-bottom: 150px solid rgb(226, 226, 226);
-    border-top: 150px solid rgb(226, 226, 226);
+    border-right: 55px solid transparent;
+    border-bottom: 125px solid rgb(226, 226, 226);
+    border-top: 125px solid rgb(226, 226, 226);
   }
 
   .about__content-left-avatar:after {
@@ -146,8 +161,38 @@ hr.about__heading__underline {
     right: -1px;
     width: 0;
     height: 3px;
-    border-left: 75px solid transparent;
-    border-bottom: 150px solid rgb(226, 226, 226);
-    border-top: 150px solid rgb(226, 226, 226);
+    border-left: 55px solid transparent;
+    border-bottom: 125px solid rgb(226, 226, 226);
+    border-top: 125px solid rgb(226, 226, 226);
+  }
+
+  .skills {
+    width: 80vw;
+    margin: 7px 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .about__content-left p {
+    width: 100vw;
+    padding: 5px 25px;
+  }
+  .about__content-left h2 {
+    padding-right: 50px;
+  }
+  .about__content-left-avatar {
+    margin: 25px 45px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .about__content-left p {
+    margin: 25px 25px;
+  }
+  .about__content-left h2 {
+    padding-right: 100px;
+  }
+  .about__content-left-avatar {
+    margin: 25px 25px;
   }
 }

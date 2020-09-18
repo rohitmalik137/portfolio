@@ -11,6 +11,7 @@
   width: 675px;
   max-width: 80%;
   height: 100vh;
+  overflow-y: scroll;
 }
 
 .modal.active {

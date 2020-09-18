@@ -1,7 +1,9 @@
 #contact {
   background-color: rgb(52, 52, 63);
+  overflow-x: hidden;
   position: relative;
   top: -15vh;
+  min-width: 300px;
   padding-top: 75px;
   text-align: center;
   margin-bottom: -100px;
@@ -52,8 +54,8 @@ textarea {
 
 .contact__footer {
   clear: right;
-  padding: 10px;
   margin-top: 125px;
+  padding-bottom: 50px;
   background-color: #1e242c;
 }
 
@@ -147,5 +149,14 @@ textarea {
   }
   .footer-icons {
     width: 65%;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  #form {
+    width: 90%;
+  }
+  .footer-icons {
+    width: 95%;
   }
 }

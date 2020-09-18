@@ -1,5 +1,6 @@
 #portfolio {
   background-color: rgb(212, 212, 212);
+  overflow-x: hidden;
   /* border: 3px solid black; */
 }
 
@@ -7,7 +8,7 @@
   display: grid;
   grid-template-columns: auto auto auto;
   color: black;
-  padding: 100px 5vw;
+  padding: 100px 100px 200px;
   min-width: 450px;
 }
 
@@ -198,11 +199,40 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .projects_container {
-    padding: 75px 10vw;
+@media only screen and (max-width: 450px) {
+  .projects_container__project:last-child {
+    margin-bottom: 100px;
+  }
+  .project__side {
+    height: 24.5rem;
+  }
+
+  .project__heading {
+    font-size: 1rem;
+    font-weight: 200;
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+    width: 40%;
+  }
+
+  .project__picture {
+    height: 10rem;
+  }
+
+  .project__details--heading {
+    font-size: large;
+    font-weight: 400;
+  }
+
+  .project__details ul li {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0.25rem;
   }
   .projects_container__project {
-    height: 30rem;
+    margin-left: -10px;
+    height: 25rem;
+    width: 70vw;
   }
 }
