@@ -1,6 +1,7 @@
 const path = require('path');
 
 const express = require('express');
+const favicon = require('serve-favicon');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 require('dotenv').config();
@@ -8,6 +9,7 @@ require('dotenv').config();
 const homeRoutes = require('./routes/home');
 
 const app = express();
+app.use(favicon(path.join(__dirname, 'public', 'assets', 'faviconn.ico')));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
