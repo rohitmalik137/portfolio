@@ -61,6 +61,10 @@
   background-image: linear-gradient(to right bottom, #b129ff, #fa43e2);
 }
 
+.project__side--back--5 {
+  background-image: linear-gradient(to right bottom, #ff0606, #ff7070);
+}
+
 .projects_container__project:hover .project__side--front {
   transform: rotateY(-180deg);
 }
@@ -98,6 +102,16 @@
 .project__picture--4 {
   background-image: linear-gradient(to right bottom, #b129ff, #fa43e2),
     url('../assets/contact.png');
+}
+
+.project__picture--4 {
+  background-image: linear-gradient(to right bottom, #b129ff, #fa43e2),
+    url('../assets/contact.png');
+}
+
+.project__picture--5 {
+  background-image: linear-gradient(to right bottom, #ff0606, #ff7070),
+    url('../assets/Screenshot 2020-11-01 162625.png');
 }
 
 .project__heading {
@@ -148,6 +162,9 @@
     rgba(177, 41, 255, 0.85),
     rgba(250, 67, 226, 0.85)
   );
+}
+.project__heading-span--5 {
+  background-image: linear-gradient(to right bottom, #ff0606, #ff7070);
 }
 
 .project__details {

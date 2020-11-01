@@ -42,12 +42,14 @@ showSlides1(slideIndex, 1);
 showSlides2(slideIndex, 2);
 showSlides3(slideIndex, 3);
 showSlides4(slideIndex, 4);
+showSlides5(slideIndex, 5);
 
 function plusSlides(n, i) {
   if (i == 1) showSlides1((slideIndex += n), i);
   if (i === 2) showSlides2((slideIndex += n), i);
   if (i === 3) showSlides3((slideIndex += n), i);
   if (i === 4) showSlides4((slideIndex += n), i);
+  if (i === 5) showSlides5((slideIndex += n), i);
 }
 
 function showSlides1(n, i) {
@@ -96,6 +98,21 @@ function showSlides3(n, i) {
 }
 
 function showSlides4(n, i) {
+  var i;
+  var slides = document.getElementsByClassName('mySlides' + i);
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  slides[slideIndex - 1].style.display = 'block';
+}
+
+function showSlides5(n, i) {
   var i;
   var slides = document.getElementsByClassName('mySlides' + i);
   if (n > slides.length) {

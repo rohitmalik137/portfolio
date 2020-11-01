@@ -196,4 +196,13 @@
   .mySlides > img {
     height: 250px;
   }
+  .visit-button {
+    font-size: smaller;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .visit-button {
+    padding: 5px;
+  }
 }

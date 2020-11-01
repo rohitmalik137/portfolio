@@ -5,4 +5,6 @@ const homePageController = require('../controllers/home');
 
 router.get('/', homePageController.homePage);
 
+router.post('/sendMail', homePageController.sendMail);
+
 module.exports = router;
