@@ -11,3 +11,9 @@
 <%- include('sections/contact.ejs') %>
 
 <%- include('includes/footer.ejs') %>
+
+<script>
+  <% if (success_or_failure) { %>
+  alert("<%= success_or_failure %>");
+<% } %>
+</script>

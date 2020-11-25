@@ -9,6 +9,8 @@ const transporter = nodemailer.createTransport(
   })
 );
 
+var succ_or_fail = null
+
 exports.sendMail = (req, res, next) => {
   const { uname, email, message } = req.body;
   transporter.sendMail({
@@ -27,12 +29,20 @@ exports.sendMail = (req, res, next) => {
               <span>message: </span>${message}<br/><br/>
           </div>
         `,
-  });
-  res.redirect('/');
+  })
+  .then(() => {
+    succ_or_fail = 'Your message is received by Rohit Malik'
+    res.redirect('/')
+  })
+  .catch(err => {
+    succ_or_fail = 'An error occured. Please try again!'
+    res.redirect('/')
+  })
 };
 
 exports.homePage = (req, res, next) => {
   res.render('home', {
     pageTitle: 'Rohit Malik',
+    success_or_failure: succ_or_fail
   });
 };
