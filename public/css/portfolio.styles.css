@@ -104,11 +104,6 @@
     url('../assets/contact.png');
 }
 
-.project__picture--4 {
-  background-image: linear-gradient(to right bottom, #b129ff, #fa43e2),
-    url('../assets/contact.png');
-}
-
 .project__picture--5 {
   background-image: linear-gradient(to right bottom, #ff0606, #ff7070),
     url('../assets/Screenshot 2020-11-01 162625.png');
