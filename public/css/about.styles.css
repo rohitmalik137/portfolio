@@ -45,14 +45,15 @@ hr.about__heading__underline {
 .about__content-left-avatar {
   width: 300px;
   height: 300px;
-  background: transparent url('../assets/CYMERA_20190718_184652.jpg');
+  /* background: transparent url('../assets/CYMERA_20190718_184652.jpg');
   background-size: cover;
-  background-position: center center;
+  background-position: center center; */
   position: relative;
   margin: 15px auto;
   z-index: 1;
+  border-radius: 50%;
 }
-
+/* 
 .about__content-left-avatar:before {
   content: '';
   position: absolute;
@@ -75,7 +76,7 @@ hr.about__heading__underline {
   border-left: 75px solid transparent;
   border-bottom: 150px solid rgb(226, 226, 226);
   border-top: 150px solid rgb(226, 226, 226);
-}
+} */
 
 .skills {
   width: 40vw;
@@ -142,7 +143,7 @@ hr.about__heading__underline {
     z-index: 1;
   }
 
-  .about__content-left-avatar:before {
+  /* .about__content-left-avatar:before {
     content: '';
     position: absolute;
     top: -1px;
@@ -164,7 +165,7 @@ hr.about__heading__underline {
     border-left: 55px solid transparent;
     border-bottom: 125px solid rgb(226, 226, 226);
     border-top: 125px solid rgb(226, 226, 226);
-  }
+  } */
 
   .skills {
     width: 80vw;
@@ -180,9 +181,9 @@ hr.about__heading__underline {
   .about__content-left h2 {
     padding-right: 50px;
   }
-  .about__content-left-avatar {
-    margin: 25px 45px;
-  }
+  /* .about__content-left-avatar {
+    margin-right: 50px;
+  } */
 }
 
 @media only screen and (max-width: 350px) {
@@ -193,6 +194,12 @@ hr.about__heading__underline {
     padding-right: 100px;
   }
   .about__content-left-avatar {
-    margin: 25px 25px;
+    margin-right: 60px;
+  }
+}
+
+@media only screen and (max-width: 310px) {
+  .about__content-left-avatar {
+    margin-right: 100px;
   }
 }
