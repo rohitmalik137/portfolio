@@ -37,89 +37,18 @@
       data-aos-duration="1000"
       class="about__content-right"
     >
+    <% if (skillsData.length > 0) {
+        for (let skill of skillsData) { %>
       <div class="skills">
-        <div class="progressBar" style="width: 85%">
-          <div class="progressBar__tag">JavaScript</div>
+        <div class="progressBar" style="width: <%= skill.percentage %>%">
+          <div class="progressBar__tag"><%= skill.skill %></div>
         </div>
-        <span>85%</span>
+        <span><%= skill.percentage %>%</span>
       </div>
-
-      <div class="skills">
-        <div class="progressBar" style="width: 85%">
-          <div class="progressBar__tag">Node.js</div>
-        </div>
-        <span>85%</span>
-      </div>
-
-      <div class="skills">
-        <div class="progressBar" style="width: 85%">
-          <div class="progressBar__tag">React</div>
-        </div>
-        <span>85%</span>
-      </div>
-
-      <div class="skills">
-        <div class="progressBar" style="width: 85%">
-          <div class="progressBar__tag">Express.js</div>
-        </div>
-        <span>85%</span>
-      </div>
-
-      <div class="skills">
-        <div class="progressBar" style="width: 80%">
-          <div class="progressBar__tag">Django</div>
-        </div>
-        <span>80%</span>
-      </div>
-
-      <div class="skills">
-        <div class="progressBar" style="width: 80%">
-          <div class="progressBar__tag">Mongo DB</div>
-        </div>
-        <span>80%</span>
-      </div>
-
-      <div class="skills">
-        <div class="progressBar" style="width: 80%">
-          <div class="progressBar__tag">Sockets.io</div>
-        </div>
-        <span>80%</span>
-      </div>
-
-      <div class="skills">
-        <div class="progressBar" style="width: 80%">
-          <div class="progressBar__tag">HTML,CSS</div>
-        </div>
-        <span>80%</span>
-      </div>
-
-      <div class="skills">
-        <div class="progressBar" style="width: 80%">
-          <div class="progressBar__tag">PHP</div>
-        </div>
-        <span>80%</span>
-      </div>
-
-      <div class="skills">
-        <div class="progressBar" style="width: 70%">
-          <div class="progressBar__tag">Core java</div>
-        </div>
-        <span>70%</span>
-      </div>
-
-      <div class="skills">
-        <div class="progressBar" style="width: 65%">
-          <div class="progressBar__tag">Data Structures</div>
-        </div>
-        <span>65%</span>
-      </div>
-
-      <div class="skills">
-        <div class="progressBar" style="width: 50%">
-          <div class="progressBar__tag">GraphQL</div>
-        </div>
-        <span>50%</span>
-      </div>
+        <%}
+         }else { %>
+            <h1>No Skills Yet!!</h1>
+        <% } %>
     </div>
   </div>
 </div>

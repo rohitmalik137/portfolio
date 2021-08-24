@@ -1,5 +1,7 @@
 const nodemailer = require('nodemailer');
 const sendGridTransport = require('nodemailer-sendgrid-transport');
+const Resume = require('../models/resumeLink');
+const Skill = require('../models/skills');
 
 const transporter = nodemailer.createTransport(
   sendGridTransport({
@@ -33,16 +35,30 @@ exports.sendMail = (req, res, next) => {
     })
     .then(() => {
       succ_or_fail = 'Your message is received by Rohit Malik';
-      res.redirect('/');
     })
     .catch((err) => {
       succ_or_fail = 'An error occured. Please try again!';
-      res.redirect('/');
+    })
+    .then(() => {
+      Resume.findOne().then((data) => {
+        Skill.find().then((skillsData) => {
+          res.render('home', {
+            success_or_failure: succ_or_fail,
+            url: data.resumeUrl,
+            skillsData,
+          });
+        });
+      });
     });
 };
 
 exports.homePage = (req, res, next) => {
-  res.render('home', {
-    success_or_failure: succ_or_fail,
+  Resume.findOne().then((data) => {
+    Skill.find().then((skillsData) => {
+      res.render('home', {
+        url: data.resumeUrl,
+        skillsData,
+      });
+    });
   });
 };

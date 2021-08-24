@@ -1,0 +1,86 @@
+<%- include('includes/header.ejs') %>
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous"
+/>
+<!-- Resume Link -->
+<div class="col px-md-5" style="margin-top: 25px">
+  <form class="w-50" action="/admin/resumeLink" method="POST">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Update Resume Link:</label>
+      <span style="color: rgb(0, 255, 0)"
+        ><%= typeof message!='undefined' ? message : '' %></span
+      >
+      <input
+        type="url"
+        name="url"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter Resume mail"
+        required
+      />
+    </div>
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+  <hr />
+
+  <!-- Skills -->
+  <div style="display: flex; justify-content: space-evenly">
+    <form class="w-25" action="/admin/addSkill" method="POST">
+      <strong>Add New Skill:</strong>
+      <hr />
+      <div class="form-group">
+        <label for="skills">Skill:</label>
+        <span style="color: rgb(0, 255, 0)"
+          ><%= typeof skillAddMessage!='undefined' ? skillAddMessage : ''
+          %></span
+        >
+        <input
+          type="text"
+          name="skill"
+          class="form-control"
+          id="skills"
+          placeholder="Enter Skill"
+          required
+        />
+        <label for="percentage">Percentage:</label>
+        <input
+          type="number"
+          name="percentage"
+          class="form-control"
+          id="percentage"
+          placeholder="Enter skill percentage"
+          required
+        />
+      </div>
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+      <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+
+    <form class="w-25" action="/admin/removeSkill" method="POST">
+      <strong>Remove any Skill:</strong>
+      <hr />
+      <div class="form-group">
+        <label for="skills">Skill:</label>
+        <span style="color: rgb(0, 255, 0)"
+          ><%= typeof skillRemoveMessage!='undefined' ? skillRemoveMessage : ''
+          %></span
+        >
+        <input
+          type="text"
+          name="skill"
+          class="form-control"
+          id="skills"
+          placeholder="Enter existing Skill"
+          required
+        />
+      </div>
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+      <button type="submit" class="btn btn-primary">Remove</button>
+    </form>
+  </div>
+</div>

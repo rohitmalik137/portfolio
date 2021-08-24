@@ -13,7 +13,7 @@
 <%- include('includes/footer.ejs') %>
 
 <script>
-  <% if (success_or_failure) { %>
+  <% if (typeof success_or_failure!='undefined') { %>
   alert("<%= success_or_failure %>");
 <% } %>
 </script>

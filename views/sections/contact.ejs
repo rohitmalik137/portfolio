@@ -45,6 +45,7 @@
       placeholder="Your Message"
       required
     ></textarea>
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
     <input type="submit" class="btn submit-btn" name="submit" value="Send" />
   </form>
   <div class="contact__footer">
